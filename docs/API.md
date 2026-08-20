@@ -195,7 +195,7 @@ Auth on every route: `Authorization: Bearer <api key>`.
 | ✅ | `monitor.get` | GET | `/monitors/{id_domain}` | — | Read | — | Get one monitor |
 | ✅ | `monitor.getBasic` | GET | `/monitors/{id_domain}/basic` | — | Read | — | Get basic monitor details |
 | ✅ | `monitor.check` | POST | `/monitors/{id_domain}/check` | — | Write & Delete | — | Run a monitor check now |
-| ✅ | `monitor.getHeartbeat` | GET | `/monitors/{id_domain}/heartbeat` | — | Read | `limit` cap only | Get heartbeat history |
+| ✅ | `monitor.getHeartbeat` | GET | `/monitors/{id_domain}/heartbeat` | — | Read | page + `limit` (no per_page) | Get heartbeat history |
 | ✅ | `monitor.getIncidents` | GET | `/monitors/{id_domain}/incidents` | — | Read | page + per_page | List monitor incidents |
 | ✅ | `monitor.countIncidents` | GET | `/monitors/{id_domain}/incidents/count` | — | Read | page + per_page | Count monitor incidents |
 | ✅ | `monitor.updateSettings` | PUT | `/monitors/{id_domain}/settings` | PATCH | Write & Delete | — | Update settings for one monitor |
