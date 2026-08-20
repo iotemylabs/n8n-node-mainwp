@@ -36,7 +36,8 @@
 			"dist/credentials/MainWpApi.credentials.js"
 		],
 		"nodes": [
-			"dist/nodes/MainWp/MainWp.node.js"
+			"dist/nodes/MainWp/MainWp.node.js",
+			"dist/nodes/MainWp/MainWpTrigger.node.js"
 		]
 	},
 	"devDependencies": {
