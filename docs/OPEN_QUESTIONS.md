@@ -28,6 +28,19 @@ Items get moved to API.md / README as they are resolved.
    says it "determines which fields the response carries" but does not enumerate the other values
    (`edit`?) or the field differences. v1 passes it through where declared, defaulting to `view`.
 
+## Found while implementing Phase 3 (needs a live Dashboard to verify)
+
+9. **Batch `updates` group is declared but reportedly non-functional.** The spec declares an
+   `updates` action group on `POST /batch` while describing it as returning `invalid-method`
+   errors for every item. The node exposes it with a warning in the field description. Verify
+   against a live Dashboard and drop the field if confirmed dead.
+10. **Monitor `active` type mismatch.** Per-monitor settings declare `active` as a string enum
+    (`0`/`1`/`useglobal`); global monitor settings declare it as a boolean. Implemented faithfully;
+    looks like a spec inconsistency worth confirming live.
+11. **`cost.update` requires the full record.** `POST /costs/{id}/edit` declares the same nine
+    required fields as create, so the node sends the full record on update. Verify a partial
+    update is truly rejected.
+
 ## Needs an owner decision
 
 7. **Plain-permalink fallback (`?rest_route=/mainwp/v2/...`).** Not implemented in v1. The README
