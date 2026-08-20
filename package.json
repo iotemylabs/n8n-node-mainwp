@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"description": "n8n community node for the MainWP Dashboard REST API v2 — manage WordPress sites, clients, tags, updates, costs, posts, pages, users, monitors and settings from n8n",
 	"license": "MIT",
-	"homepage": "https://github.com/iotemylabs/n8n-nodes-mainwp",
+	"homepage": "https://github.com/iotemylabs/n8n-node-mainwp",
 	"keywords": [
 		"n8n-community-node-package",
 		"mainwp",
@@ -15,7 +15,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/iotemylabs/n8n-nodes-mainwp.git"
+		"url": "https://github.com/iotemylabs/n8n-node-mainwp.git"
 	},
 	"scripts": {
 		"build": "n8n-node build",
