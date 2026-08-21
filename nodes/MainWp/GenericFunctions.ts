@@ -127,7 +127,10 @@ function mapRequestError(this: MainWpContext, error: JsonObject, endpoint: strin
 		message = wpError.code !== undefined ? `${wpError.code}: ${wpError.message}` : wpError.message;
 	}
 
-	if (status === 401) {
+	if (status === 401 && wpError.code === 'mainwp_rest_authentication_disabled_key') {
+		description =
+			'The Dashboard recognizes the key but it is disabled. Enable the key under MainWP Dashboard > API Access > API Keys (or enable the REST API itself in the Dashboard settings).';
+	} else if (status === 401) {
 		description =
 			'Check the key is valid and that its scope covers this method — MainWP returns 401 for both an invalid key and an insufficient scope. GET needs Read scope; other methods need Write & Delete scope.';
 	} else if (status === 404 && wpError.code === 'rest_no_route') {
